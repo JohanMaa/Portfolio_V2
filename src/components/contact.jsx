@@ -4,20 +4,20 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="max-w-2xl mx-auto text-center py-32 px-6"
+      className="max-w-2xl mx-auto text-center py-32 px-6 bg-[#F9FAFB]"
     >
       {/* Subtitle */}
-      <p className="text-[#64ffda] font-mono text-sm mb-4">
+      <p className="text-[#7C3AED] font-mono text-sm mb-4">
         04. What’s Next?
       </p>
 
       {/* Title */}
-      <h2 className="text-4xl font-bold text-[#ccd6f6] mb-6">
+      <h2 className="text-4xl font-bold text-[#111827] mb-6">
         Get In Touch
       </h2>
 
       {/* Description */}
-      <p className="text-[#8892b0] mb-12 leading-relaxed">
+      <p className="text-[#4B5563] mb-12 leading-relaxed">
         Although I’m not currently looking for any new opportunities,
         my inbox is always open. Whether you have a question or just
         want to say hi, I’ll try my best to get back to you!
@@ -25,8 +25,8 @@ const Contact = () => {
 
       {/* Button */}
       <a
-        href="mailto:youremail@example.com"
-        className="inline-block px-6 py-3 border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 font-mono text-sm transition"
+        href="mailto:johanemaulana@gmail.com"
+        className="btn-outline animate-fade-in"
       >
         Say Hello
       </a>

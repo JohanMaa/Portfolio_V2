@@ -22,7 +22,7 @@ const LeftSidebar = () => {
               href={icon.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#a8b2d1] hover:text-[#64ffda] transition-all duration-200 transform hover:-translate-y-1"
+              className="text-[#4B5563] hover:text-[#7C3AED] transition-all duration-200 hover:scale-110"
               aria-label={icon.label}
             >
               <svg
@@ -38,7 +38,7 @@ const LeftSidebar = () => {
         </div>
 
         {/* Garis di bawah */}
-        <div className="w-0.5 h-20 bg-[#ccd6f6]"></div>
+        <div className="w-0.5 h-20 bg-[#4B5563]"></div>
       </div>
     </aside>
   );

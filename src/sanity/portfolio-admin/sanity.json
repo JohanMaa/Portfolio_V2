@@ -1,0 +1,23 @@
+{
+    "root": true,
+    "project": {
+      "name": "portfolio-admin",
+      "basePath": "/"
+    },
+    "api": {
+      "projectId": "i3rgm9pp",
+      "dataset": "production"
+    },
+    "plugins": [
+      "@sanity/base",
+      "@sanity/default-layout",
+      "@sanity/default-login",
+      "@sanity/desk-tool"
+    ],
+    "parts": [
+      {
+        "name": "part:@sanity/base/schema",
+        "path": "./schemas"
+      }
+    ]
+  }

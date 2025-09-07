@@ -22,8 +22,8 @@ const experiences = [
     start: "Jan 2016",
     end: "Apr 2018",
     points: [
-      "Worked on UI components for internal tools.",
-      "Improved performance of web apps used globally by employees.",
+      "Developed UI components for internal tools with optimized performance.",
+      "Enhanced global web app efficiency for employee use.",
     ],
   },
   {
@@ -32,7 +32,7 @@ const experiences = [
     url: "#",
     start: "Sep 2014",
     end: "Dec 2015",
-    points: ["Built websites for student projects.", "Maintained studio portfolio site."],
+    points: ["Constructed websites for student-led initiatives.", "Managed studio portfolio site maintenance."],
   },
   {
     company: "Starry",
@@ -40,7 +40,7 @@ const experiences = [
     url: "#",
     start: "Jan 2013",
     end: "Aug 2014",
-    points: ["Developed wireless networking tools.", "Created user onboarding flows."],
+    points: ["Engineered wireless networking tools for connectivity.", "Designed user onboarding workflows."],
   },
   {
     company: "MullenLowe",
@@ -48,7 +48,7 @@ const experiences = [
     url: "#",
     start: "Jun 2012",
     end: "Dec 2012",
-    points: ["Assisted in development of ad campaign sites."],
+    points: ["Supported development of ad campaign websites."],
   },
 ];
 
@@ -56,28 +56,28 @@ const Experience = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="experience" className="max-w-5xl mx-auto py-20 px-6">
+    <section id="experience" className="max-w-5xl mx-auto py-20 px-6 bg-[#F9FAFB]">
       {/* Header */}
       <div className="flex items-center mb-10">
-        <h2 className="text-2xl font-bold text-[#ccd6f6] flex items-center">
-          <span className="text-[#64ffda] font-mono text-lg mr-2">02.</span>
+        <h2 className="text-2xl font-bold text-[#111827] flex items-center">
+          <span className="text-[#7C3AED] font-mono text-lg mr-2">02.</span>
           Where I’ve Worked
         </h2>
-        <div className="flex-1 h-px bg-[#233554] ml-5"></div>
+        <div className="flex-1 h-px bg-[#4B5563] ml-5"></div>
       </div>
 
       {/* Content */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {/* Tabs */}
-        <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-l border-[#233554]">
+        <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-l border-[#4B5563]">
           {experiences.map((exp, idx) => (
             <button
               key={exp.company}
               onClick={() => setActiveIndex(idx)}
-              className={`px-4 py-2 text-left font-mono text-sm whitespace-nowrap hover:bg-[#112240] transition-colors border-l-2 ${
+              className={`px-4 py-2 text-left font-mono text-sm whitespace-nowrap hover:bg-[#F9FAFB]/80 transition-colors border-l-2 ${
                 activeIndex === idx
-                  ? "text-[#64ffda] border-[#64ffda] bg-[#112240]"
-                  : "text-[#8892b0] border-transparent"
+                  ? "text-[#7C3AED] border-[#7C3AED] bg-[#F9FAFB]/80"
+                  : "text-[#4B5563] border-transparent"
               }`}
             >
               {exp.company}
@@ -86,14 +86,14 @@ const Experience = () => {
         </div>
 
         {/* Details */}
-        <div className="md:col-span-3 text-[#8892b0]">
-          <h3 className="text-lg font-semibold text-[#ccd6f6]">
+        <div className="md:col-span-3 text-[#4B5563]">
+          <h3 className="text-lg font-semibold text-[#111827]">
             {experiences[activeIndex].role}{" "}
             <a
               href={experiences[activeIndex].url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#64ffda] hover:underline"
+              className="text-[#7C3AED] hover:underline"
             >
               @ {experiences[activeIndex].company}
             </a>
@@ -105,7 +105,7 @@ const Experience = () => {
             {experiences[activeIndex].points.map((point, i) => (
               <li
                 key={i}
-                className="flex items-start before:content-['▹'] before:text-[#64ffda] before:mr-2"
+                className="flex items-start before:content-['▹'] before:text-[#7C3AED] before:mr-2"
               >
                 {point}
               </li>

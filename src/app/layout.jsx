@@ -1,15 +1,16 @@
 import "./globals.css";
+import LayoutClient from "./layout-client";
 
 export const metadata = {
-  title: "Your Portfolio V2",
+  title: "Johan Maulana",
   description: "A portfolio inspired by Brittany Chiang",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#0a192f] text-[#ccd6f6] font-inter antialiased">
-        {children}
+      <body className="bg-[#F9FAFB] text-[#111827] font-inter antialiased">
+      <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
   );

@@ -10,15 +10,15 @@ const OtherProjects = () => {
   const visibleProjects = showAll ? otherProjects : otherProjects.slice(0, 6);
 
   return (
-    <section id="other-projects" className="max-w-6xl mx-auto py-20 px-6">
+    <section id="other-projects" className="max-w-6xl mx-auto py-20 px-6 bg-[#F9FAFB] mt-10 mb-10">
       {/* Header */}
       <div className="text-center mb-10">
-        <h2 className="text-2xl font-bold text-[#ccd6f6]">
+        <h2 className="text-2xl font-bold text-[#111827]">
           Other Noteworthy Projects
         </h2>
         <a
           href="#"
-          className="text-[#64ffda] text-sm font-mono hover:underline"
+          className="text-[#7C3AED] text-sm font-mono hover:underline"
         >
           view the archive
         </a>
@@ -29,17 +29,17 @@ const OtherProjects = () => {
         {visibleProjects.map((proj) => (
           <div
             key={proj.title}
-            className="bg-[#112240] rounded-lg p-6 flex flex-col justify-between shadow-lg hover:-translate-y-1 transition-transform duration-300"
+            className="bg-[#F9FAFB]/80 rounded-lg p-6 flex flex-col justify-between shadow-lg hover:-translate-y-1 transition-transform duration-300"
           >
             {/* Icons */}
             <div className="flex justify-between items-start mb-6">
-              <HiOutlineFolder size={40} className="text-[#64ffda]" />
-              <div className="flex space-x-4 text-[#ccd6f6]">
+              <HiOutlineFolder size={40} className="text-[#7C3AED]" />
+              <div className="flex space-x-4 text-[#111827]">
                 <a
                   href={proj.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#64ffda]"
+                  className="hover:text-[#7C3AED] hover:scale-110 transition-all duration-200"
                 >
                   <FiGithub size={20} />
                 </a>
@@ -47,7 +47,7 @@ const OtherProjects = () => {
                   href={proj.external}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#64ffda]"
+                  className="hover:text-[#7C3AED] hover:scale-110 transition-all duration-200"
                 >
                   <FiExternalLink size={20} />
                 </a>
@@ -55,13 +55,13 @@ const OtherProjects = () => {
             </div>
 
             {/* Title & Description */}
-            <h3 className="text-lg font-bold text-[#ccd6f6] mb-2">
+            <h3 className="text-lg font-bold text-[#111827] mb-2">
               {proj.title}
             </h3>
-            <p className="text-[#8892b0] text-sm mb-4">{proj.description}</p>
+            <p className="text-[#4B5563] text-sm mb-4">{proj.description}</p>
 
             {/* Tech */}
-            <ul className="flex flex-wrap font-mono text-xs text-[#8892b0] mt-auto">
+            <ul className="flex flex-wrap font-mono text-xs text-[#4B5563] mt-auto">
               {proj.tech.map((t) => (
                 <li key={t} className="mr-3 mb-1">
                   {t}
@@ -76,7 +76,7 @@ const OtherProjects = () => {
       <div className="text-center mt-12">
         <button
           onClick={() => setShowAll(!showAll)}
-          className="px-6 py-3 border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 font-mono text-sm transition"
+          className="btn-outline animate-fade-in"
         >
           {showAll ? "Show Less" : "Show More"}
         </button>
